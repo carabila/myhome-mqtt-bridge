@@ -1,0 +1,9 @@
+{
+    "dependencies": {
+        "mqtt": "*",
+        "myhome": "0.0.2"
+    },
+    "scripts": {
+        "start": "node app.js"
+    }
+}
