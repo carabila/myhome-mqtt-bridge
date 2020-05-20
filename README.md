@@ -4,13 +4,13 @@ Docker image to connect a bticino/legrand myhome gateway to an mqtt broker.
 
 docker run \
   --name myhome-mqtt-bridge \
-  -e MQTT_URL="mqtt://10.0.10.101:1883"
-  -e MQTT_USER="mqttuser"
-  -e MQTT_PASSWORD="mqttpassword"
-  -e MQTT_DISCOVERY="true"
-  -e MQTT_TOPIC_PREFIX="homeassistant"
-  -e MYHOME_HOST="10.0.10.35"
-  -e MYHOME_PORT="20000"
+  -e MQTT_URL="mqtt://10.0.10.101:1883" \
+  -e MQTT_USER="mqttuser" \
+  -e MQTT_PASSWORD="mqttpassword" \
+  -e MQTT_DISCOVERY="true" \
+  -e MQTT_TOPIC_PREFIX="homeassistant" \
+  -e MYHOME_HOST="10.0.10.35" \
+  -e MYHOME_PORT="20000" \
   -e MYHOME_PASSWORD="00000" \
   carabila/myhome-mqtt-bridge:latest
 
