@@ -107,7 +107,7 @@ client.on('connect', function() { // When connected
 	mhengine.on ('packet', function (data) {
         var strData = data.toString();
 		var msg = parsePacket(strData);
-		if (msg && scs_mqtt[msg.chi]) {
+		if (msg && msg.chi in scs_mqtt) {
 
             // publish a message to a topic
             topic = config.mqtt_config.topic_prefix + '/' + scs_mqtt[msg.chi] + '/' + msg.dove;
